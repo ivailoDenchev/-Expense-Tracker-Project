@@ -303,3 +303,6 @@ C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-
 C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\bin\Debug\net8.0\Syncfusion.EJ2.dll
+C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\bin\Debug\net8.0\Syncfusion.Licensing.dll
+C:\Users\Private Pc\OneDrive\Documents\Expenses-School-Project\-Expense-Tracker-Project\CookingListWebAsp\obj\Debug\net8.0\CookingListWebAsp.MvcApplicationPartsAssemblyInfo.cs

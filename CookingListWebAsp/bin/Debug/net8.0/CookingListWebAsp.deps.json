@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore": "8.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.13",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
+          "Syncfusion.EJ2.AspNet.Core": "20.1.0.58"
         },
         "runtime": {
           "CookingListWebAsp.dll": {}
@@ -1634,6 +1635,26 @@
           }
         }
       },
+      "Syncfusion.EJ2.AspNet.Core/20.1.0.58": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "Syncfusion.Licensing": "20.1.0.58"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Syncfusion.EJ2.dll": {
+            "assemblyVersion": "20.1.0.58",
+            "fileVersion": "20.1.0.58"
+          }
+        }
+      },
+      "Syncfusion.Licensing/20.1.0.58": {
+        "runtime": {
+          "lib/net6.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "20.1.0.58",
+            "fileVersion": "20.1.0.58"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -2757,6 +2778,20 @@
       "sha512": "sha512-v/GGlIj2dd7svplFmASWEueu62veKW0MrMtBaZ7QG8aJTSGv2yE+pgUGhXRcQ4nxNOEq/wLBrz1vkth/1SND7A==",
       "path": "nuget.versioning/6.11.0",
       "hashPath": "nuget.versioning.6.11.0.nupkg.sha512"
+    },
+    "Syncfusion.EJ2.AspNet.Core/20.1.0.58": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Lj1lf8m/tvWnn7kB0XWlxrtbnJUkHFKeOC49rOTBSpXk7eU51XVor5mTANBf84XZNYQc0lWCsVAG0mqT1DiiIQ==",
+      "path": "syncfusion.ej2.aspnet.core/20.1.0.58",
+      "hashPath": "syncfusion.ej2.aspnet.core.20.1.0.58.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/20.1.0.58": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cupk6gJjwDNJfK4dl+uiVtjKpCiZ8OfjsmnS6402HDx1uREUGKH94GtUJWIUFqRsSY2Ar6rcTAo867+PSl01pA==",
+      "path": "syncfusion.licensing/20.1.0.58",
+      "hashPath": "syncfusion.licensing.20.1.0.58.nupkg.sha512"
     },
     "System.ClientModel/1.0.0": {
       "type": "package",
