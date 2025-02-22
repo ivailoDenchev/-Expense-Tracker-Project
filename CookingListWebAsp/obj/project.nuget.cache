@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4mbcKXTfCfgMg39cxNV9V4QOjYA7HuPc2D4TyDNue+rL/ECjowphHmGOA86VJDSCatfbpJfUzWY0Yt+9zbgSSQ==",
+  "dgSpecHash": "aSQYuHQ774/sQy0dJ/0MUe2iEee5E1hIPP64vuDDJUkl6pAItDMoQiUfYDQwRQIhobEtQpdrzDnJFd3O+LxxMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
   "expectedPackageFiles": [
@@ -124,6 +124,8 @@
     "C:\\Users\\Private Pc\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\Private Pc\\.nuget\\packages\\syncfusion.ej2.aspnet.core\\20.1.0.58\\syncfusion.ej2.aspnet.core.20.1.0.58.nupkg.sha512",
+    "C:\\Users\\Private Pc\\.nuget\\packages\\syncfusion.licensing\\20.1.0.58\\syncfusion.licensing.20.1.0.58.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",

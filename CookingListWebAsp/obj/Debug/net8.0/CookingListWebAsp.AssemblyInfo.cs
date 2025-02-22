@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CookingListWebAsp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b887bf09c79c547714d09104fa3229e42ac0d3c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+641aba19ae058b2da459c360e1c3b6cdb911cb55")]
 [assembly: System.Reflection.AssemblyProductAttribute("CookingListWebAsp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CookingListWebAsp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
