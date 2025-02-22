@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Private Pc\\OneDrive\\Documents\\CookinListMainaProject\\CookinListMaina\\CookingListWebAsp\\CookingListWebAsp\\CookingListWebAsp.csproj": {}
+    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Private Pc\\OneDrive\\Documents\\CookinListMainaProject\\CookinListMaina\\CookingListWebAsp\\CookingListWebAsp\\CookingListWebAsp.csproj": {
+    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Private Pc\\OneDrive\\Documents\\CookinListMainaProject\\CookinListMaina\\CookingListWebAsp\\CookingListWebAsp\\CookingListWebAsp.csproj",
+        "projectUniqueName": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
         "projectName": "CookingListWebAsp",
-        "projectPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\CookinListMainaProject\\CookinListMaina\\CookingListWebAsp\\CookingListWebAsp\\CookingListWebAsp.csproj",
+        "projectPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
         "packagesPath": "C:\\Users\\Private Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\CookinListMainaProject\\CookinListMaina\\CookingListWebAsp\\CookingListWebAsp\\obj\\",
+        "outputPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -52,17 +52,21 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.3, )"
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
             }
           },
           "imports": [
