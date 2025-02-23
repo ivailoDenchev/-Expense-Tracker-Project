@@ -1,8 +1,162 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Dashboard";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Stats Cards -->
+<div class="grid grid-cols-3 gap-6 mb-8">
+    <div class="bg-[#16213e] rounded-lg p-6">
+        <div class="flex items-center justify-between">
+            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
+                <span class="text-green-500 text-2xl">$</span>
+            </div>
+            <div class="text-right">
+                <p class="text-purple-200">Total Income</p>
+                <p class="text-2xl font-semibold">$12,500</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#16213e] rounded-lg p-6">
+        <div class="flex items-center justify-between">
+            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center">
+                <span class="text-red-500 text-2xl">$</span>
+            </div>
+            <div class="text-right">
+                <p class="text-purple-200">Total Expense</p>
+                <p class="text-2xl font-semibold">$9,804</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#16213e] rounded-lg p-6">
+        <div class="flex items-center justify-between">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                <span class="text-blue-500 text-2xl">$</span>
+            </div>
+            <div class="text-right">
+                <p class="text-purple-200">Balance</p>
+                <p class="text-2xl font-semibold">$2,696</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Charts Section -->
+<div class="grid grid-cols-2 gap-6">
+    <div class="bg-[#16213e] rounded-lg p-6">
+        <h3 class="text-lg mb-4 text-purple-200">Expense By Category</h3>
+        <div class="relative h-[300px]">
+            <!-- Fixed height container -->
+            <canvas id="expenseChart"></canvas>
+        </div>
+    </div>
+
+    <div class="bg-[#16213e] rounded-lg p-6">
+        <h3 class="text-lg mb-4 text-purple-200">Income vs Expense</h3>
+        <div class="relative h-[300px]">
+            <!-- Fixed height container -->
+            <canvas id="timelineChart"></canvas>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            // Expense Chart
+            const expenseCtx = document.getElementById('expenseChart');
+            if (expenseCtx) {
+                new Chart(expenseCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Health Care', 'Education', 'Outing', 'Travel', 'Garments', 'Grocery'],
+                        datasets: [{
+                            data: [3000, 2800, 2000, 1504, 300, 200],
+                            backgroundColor: [
+                                '#10B981', // Green
+                                '#60A5FA', // Blue
+                                '#FBBF24', // Yellow
+                                '#F97316', // Orange
+                                '#34D399', // Light green
+                                '#EF4444'  // Red
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: '#E5E7EB',
+                                    padding: 20
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Timeline Chart
+            const timelineCtx = document.getElementById('timelineChart');
+            if (timelineCtx) {
+                new Chart(timelineCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['14-Jul', '15-Jul', '16-Jul', '17-Jul', '18-Jul'],
+                        datasets: [{
+                            label: 'Income',
+                            data: [7000, 6000, 3000, 4000, 2000],
+                            borderColor: '#10B981',
+                            backgroundColor: '#10B981',
+                            tension: 0.4,
+                            borderWidth: 2
+                        }, {
+                            label: 'Expense',
+                            data: [4000, 5000, 6000, 4000, 5000],
+                            borderColor: '#FBBF24',
+                            backgroundColor: '#FBBF24',
+                            tension: 0.4,
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    color: '#E5E7EB',
+                                    padding: 20
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                ticks: {
+                                    color: '#E5E7EB'
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                ticks: {
+                                    color: '#E5E7EB'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+}

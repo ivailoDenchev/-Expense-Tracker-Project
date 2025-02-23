@@ -1,43 +1,111 @@
 ﻿@model CookingListWebAsp.Models.Category
 
-@{
-    ViewData["Title"] = "Create";
-}
+<div class="p-8">
+    <!-- Breadcrumb -->
+    <div class="flex items-center space-x-2 text-purple-200 mb-8">
+        <a href="/" class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+            </svg>
+        </a>
+        <span>→</span>
+        <a href="/Category" class="hover:text-white">Category</a>
+        <span>→</span>
+        <span>Create</span>
+    </div>
 
-<h1>Create</h1>
+    <h2 class="text-2xl font-semibold text-white mb-6">Create a new category</h2>
 
-<h4>Category</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
-                <input asp-for="Title" class="form-control" />
-                <span asp-validation-for="Title" class="text-danger"></span>
+    <div class="grid grid-cols-3 gap-6">
+        <!-- Form Card -->
+        <div class="col-span-2 bg-[#1a1a2e] rounded-lg p-6">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="space-y-6">
+                    <!-- Type Toggle -->
+                    <div class="grid grid-cols-2 gap-2 mb-6">
+                        <input type="hidden" id="Type" name="Type" value="Expense" />
+                        <button type="button" onclick="setType('Expense')" id="expenseBtn"
+                                class="py-2 px-4 rounded bg-white text-[#1a1a2e] font-medium">
+                            Expense
+                        </button>
+                        <button type="button" onclick="setType('Income')" id="incomeBtn"
+                                class="py-2 px-4 rounded bg-[#16213e] text-white font-medium">
+                            Income
+                        </button>
+                    </div>
+
+                    <!-- Title Input -->
+                    <div>
+                        <label class="block text-purple-200 mb-2">Title</label>
+                        @Html.EditorFor(model => model.Title, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    @class = "w-full bg-[#16213e] border border-[#16213e] rounded p-2 text-white focus:outline-none focus:border-purple-500",
+                                    maxlength = "50"
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-red-500 mt-1" })
+                    </div>
+
+                    <!-- Icon Input -->
+                    <div>
+                        <label class="block text-purple-200 mb-2">Icon</label>
+                        @Html.EditorFor(model => model.Icon, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    @class = "w-full bg-[#16213e] border border-[#16213e] rounded p-2 text-white focus:outline-none focus:border-purple-500",
+                                    maxlength = "5"
+                                }
+                            })
+                        @Html.ValidationMessageFor(model => model.Icon, "", new { @class = "text-red-500 mt-1" })
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="flex items-center">
+                        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded">
+                            Submit
+                        </button>
+                        <a href="@Url.Action("Index")" class="ml-4 text-purple-200 hover:text-white">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Preview Card -->
+        <div class="bg-[#1a1a2e] rounded-lg p-6 flex items-center justify-center">
+            <div class="text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p class="mt-2 text-center">Icon Preview</p>
             </div>
-            <div class="form-group">
-                <label asp-for="Icon" class="control-label"></label>
-                <input asp-for="Icon" class="form-control" />
-                <span asp-validation-for="Icon" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Type" class="control-label"></label>
-                <input asp-for="Type" class="form-control" />
-                <span asp-validation-for="Type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        function setType(type) {
+            document.getElementById('Type').value = type;
+
+            if (type === 'Expense') {
+                document.getElementById('expenseBtn').className = 'py-2 px-4 rounded bg-white text-[#1a1a2e] font-medium';
+                document.getElementById('incomeBtn').className = 'py-2 px-4 rounded bg-[#16213e] text-white font-medium';
+            } else {
+                document.getElementById('expenseBtn').className = 'py-2 px-4 rounded bg-[#16213e] text-white font-medium';
+                document.getElementById('incomeBtn').className = 'py-2 px-4 rounded bg-white text-[#1a1a2e] font-medium';
+            }
+        }
+    </script>
 }

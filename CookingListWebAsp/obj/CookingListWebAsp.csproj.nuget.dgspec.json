@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {}
+    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {
+    "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
+        "projectUniqueName": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
         "projectName": "CookingListWebAsp",
-        "projectPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
+        "projectPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
         "packagesPath": "C:\\Users\\Private Pc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\obj\\",
+        "outputPath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aSQYuHQ774/sQy0dJ/0MUe2iEee5E1hIPP64vuDDJUkl6pAItDMoQiUfYDQwRQIhobEtQpdrzDnJFd3O+LxxMA==",
+  "dgSpecHash": "29KQxCuWoAAbieHauM4IBtwOf4iKldv3/nk6/JQULBGksG+b/9yzlgs+GiRCHjFbD7gTv2rTVI7ghmWZGzMfBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-School-Project\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
+  "projectFilePath": "C:\\Users\\Private Pc\\OneDrive\\Documents\\Expenses-project 2\\-Expense-Tracker-Project\\CookingListWebAsp\\CookingListWebAsp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Private Pc\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Private Pc\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

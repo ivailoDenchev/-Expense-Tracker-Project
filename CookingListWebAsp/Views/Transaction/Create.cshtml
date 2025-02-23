@@ -1,0 +1,84 @@
+﻿@model CookingListWebAsp.Models.Transaction
+
+<div class="p-8">
+    <h2 class="text-2xl font-semibold text-white mb-8">Create a new transaction</h2>
+
+    <div class="grid grid-cols-3 gap-6">
+        <!-- Form Card -->
+        <div class="col-span-2 bg-[#1a1a2e] rounded-lg p-6">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <!-- Date Input -->
+                <div class="mb-6">
+                    <label class="block text-gray-300 mb-2">Date</label>
+                    <div class="relative">
+                        @Html.EditorFor(model => model.Date, new
+                            {
+                                htmlAttributes = new
+                                {
+                                    @class = "w-full bg-[#16213e] border-none rounded p-2 text-white focus:outline-none",
+                                    type = "date"
+                                }
+                            })
+                        <div class="absolute right-2 top-2 text-gray-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Category Dropdown -->
+                <div class="mb-6">
+                    @Html.DropDownList("CategoryId", null, "Select Category", new
+                        {
+                            @class = "w-full bg-[#16213e] border-none rounded p-2 text-white focus:outline-none"
+                        })
+                </div>
+
+                <!-- Amount Input -->
+                <div class="mb-6">
+                    <label class="block text-gray-300 mb-2">Amount</label>
+                    @Html.EditorFor(model => model.Amount, new
+                        {
+                            htmlAttributes = new
+                            {
+                                @class = "w-full bg-white border-none rounded p-2 text-black focus:outline-none",
+                                type = "number",
+                                value = "0"
+                            }
+                        })
+                </div>
+
+                <!-- Note Input -->
+                <div class="mb-6">
+                    <label class="block text-gray-300 mb-2">Note</label>
+                    @Html.TextAreaFor(model => model.Note, new
+                        {
+                            @class = "w-full bg-white border-none rounded p-2 text-black focus:outline-none resize-none",
+                            rows = "3"
+                        })
+                </div>
+
+                <!-- Create Button -->
+                <div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded">
+                        Create
+                    </button>
+                </div>
+            }
+        </div>
+
+        <!-- Preview Card -->
+        <div class="bg-[#1a1a2e] rounded-lg p-6 flex items-center justify-center">
+            <div class="text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M14 3v4a1 1 0 001 1h4M7 7v10a2 2 0 002 2h6a2 2 0 002-2V7H7zM9 7V4a1 1 0 011-1h4a1 1 0 011 1v3M10 11h4M10 15h4" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

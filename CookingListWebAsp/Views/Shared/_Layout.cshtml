@@ -1,52 +1,57 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - CookingListWebAsp</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/20.1.55/material.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/CookingListWebAsp.styles.css" asp-append-version="true" />
-    <script src="https://cdn.syncfusion.com/ej2/20.1.55/dist/ej2.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet App</title>
+
+    <!-- In the head section of _Layout.cshtml -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">CookingListWebAsp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+<body class="bg-[#1a1a2e] text-white">
+    <!-- Changed to dark purple -->
+    <div class="flex min-h-screen">
+        <!-- Sidebar - Changed to deeper purple -->
+        <div class="fixed left-0 h-full w-64 bg-[#16213e] p-4 overflow-y-auto">
+            <div class="flex items-center space-x-3 mb-8">
+                <div class="w-10 h-10 rounded-full bg-purple-700"></div>
+                <div>
+                    <h2 class="font-semibold">Wallet App</h2>
+                    <p class="text-sm text-purple-200">Ashton Cox</p>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+            <div class="space-y-6">
+                <div>
+                    <p class="text-purple-400 text-sm mb-4">GENERAL</p>
+                    <div class="space-y-2">
+                        @Html.ActionLink("Dashboard", "Index", "Home", null, new { @class = "flex items-center space-x-3 text-purple-200 hover:text-white w-full p-2 rounded hover:bg-purple-900" })
+                        @Html.ActionLink("Categories", "Index", "Category", null, new { @class = "flex items-center space-x-3 text-purple-200 hover:text-white w-full p-2 rounded hover:bg-purple-900" })
+                        @Html.ActionLink("Transactions", "Index", "Transaction", null, new { @class = "flex items-center space-x-3 text-purple-200 hover:text-white w-full p-2 rounded hover:bg-purple-900" })
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-purple-400 text-sm mb-4">EXTRAS</p>
+                    <div class="space-y-2">
+                        @Html.ActionLink("Reports", "Reports", "Home", null, new { @class = "flex items-center space-x-3 text-purple-200 hover:text-white w-full p-2 rounded hover:bg-purple-900" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="ml-64 flex-1 p-8">
             @RenderBody()
-        </main>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - CookingListWebAsp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-    <ejs-scripts></ejs-scripts>
+    @await RenderSectionAsync("scripts", required: false)
 </body>
 </html>
